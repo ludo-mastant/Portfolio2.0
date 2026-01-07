@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | BTS SIO - SLAM</title>
+    <meta name="description" content="Portfolio BTS SIO : projets, compétences, veille, parcours et contact." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <canvas id="fx-canvas" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="header">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <span class="brand__dot"></span>
+        <span class="brand__name">Portfolio</span>
+        <span class="brand__tag">BTS SIO</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#veille">Veille</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="chip" id="btnTheme" type="button" aria-label="Changer de thème">
+          <span class="chip__icon" aria-hidden="true">☾</span>
+          <span class="chip__text">Thème</span>
+        </button>
+
+        <button class="chip" id="btnCmd" type="button" aria-label="Ouvrir la palette de commandes">
+          <span class="chip__icon" aria-hidden="true">⌘</span>
+          <span class="chip__text">Menu</span>
+        </button>
+
+        <button class="burger" id="btnBurger" type="button" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer__panel">
+        <div class="drawer__top">
+          <div class="drawer__title">Navigation</div>
+          <button class="iconbtn" id="btnCloseDrawer" type="button" aria-label="Fermer">✕</button>
+        </div>
+        <div class="drawer__links">
+          <a href="#projets">Projets</a>
+          <a href="#competences">Compétences</a>
+          <a href="#veille">Veille</a>
+          <a href="#parcours">Parcours</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="drawer__footer">
+          <button class="chip chip--wide" id="btnTheme2" type="button">
+            <span class="chip__icon" aria-hidden="true">☾</span>
+            <span class="chip__text">Basculer le thème</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="cmdk" id="cmdk" aria-hidden="true">
+      <div class="cmdk__panel" role="dialog" aria-modal="true" aria-label="Palette de commandes">
+        <div class="cmdk__inputWrap">
+          <span class="cmdk__icon" aria-hidden="true">⌕</span>
+          <input id="cmdkInput" type="text" placeholder="Tape : projets, compétences, contact…" autocomplete="off" />
+          <kbd class="kbd" aria-hidden="true">Esc</kbd>
+        </div>
+        <div class="cmdk__list" id="cmdkList"></div>
+        <div class="cmdk__hint">
+          <span>Entrée pour ouvrir</span>
+          <span>↑↓ pour naviguer</span>
+        </div>
+      </div>
+    </div>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero__grid">
+          <div class="hero__copy reveal">
+            <div class="pill">
+              <span class="pill__dot"></span>
+              <span id="availability">Étudiant BTS SIO option SLAM</span>
+            </div>
+
+            <h1 class="title">
+              <span class="title__thin">Je suis</span>
+              <span class="title__name" id="name">Ludo</span>,
+              <br />
+              <span class="title__fx" id="typing"></span>
+            </h1>
+
+            <p class="lead">
+              Je suis actuellement en <strong>BTS SIO option SLAM</strong> (Solutions Logicielles et Applications Métiers).
+              Avant cela, j’ai obtenu un <strong>bac STI2D option SIN</strong>. Je suis passionné par le développement web et logiciel.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#projets">
+                Voir les projets
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn--ghost" href="#contact">Me contacter</a>
+              <a class="btn btn--ghost" href="./assets/CV.pdf" target="_blank" rel="noreferrer">Télécharger CV (PDF)</a>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="stat__num" data-count="4">0</div>
+                <div class="stat__label">Projets</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num" data-count="7">0</div>
+                <div class="stat__label">Compétences clés</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num" data-count="1">0</div>
+                <div class="stat__label">Stage (CTI)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__card reveal">
+            <div class="glass">
+              <div class="glass__top">
+                <div class="avatar" aria-hidden="true">
+                  <div class="avatar__ring"></div>
+                  <div class="avatar__inner">LM</div>
+                </div>
+
+                <div class="mini">
+                  <div class="mini__title">Stack & outils</div>
+                  <div class="mini__chips" id="stackChips"></div>
+                </div>
+              </div>
+
+              <div class="glass__mid">
+                <div class="badge">
+                  <span class="badge__text">SLAM • Web • Python • SQL • Git</span>
+                </div>
+
+                <div class="progress">
+                  <div class="progress__row">
+                    <span>Web</span><span>90%</span>
+                  </div>
+                  <div class="progress__bar"><div class="progress__fill" style="width:90%"></div></div>
+
+                  <div class="progress__row">
+                    <span>Data / SQL</span><span>75%</span>
+                  </div>
+                  <div class="progress__bar"><div class="progress__fill" style="width:75%"></div></div>
+
+                  <div class="progress__row">
+                    <span>Git / Docs</span><span>85%</span>
+                  </div>
+                  <div class="progress__bar"><div class="progress__fill" style="width:85%"></div></div>
+                </div>
+              </div>
+
+              <div class="glass__bot">
+                <div class="quick">
+                  <button class="qbtn" id="btnFocusProjects" type="button"> Projets</button>
+                  <button class="qbtn" id="btnFocusSkills" type="button"> Compétences</button>
+                  <button class="qbtn" id="btnFocusContact" type="button"> Contact</button>
+                </div>
+                <div class="hint">Astuce : <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">K</kbd> pour le menu rapide.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee__track">
+            <span>HTML • CSS • JavaScript •</span><span>PHP •</span><span>Python • SQL •</span><span>Git/GitHub •</span>
+            <span>HTML • CSS • JavaScript •</span><span>PHP •</span><span>Python • SQL •</span><span>Git/GitHub •</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets" class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Projets</h2>
+            <p class="sub">Tes réalisations : contexte, objectifs, rôle, techno, preuves, résultats.</p>
+          </div>
+
+          <div class="toolbar reveal">
+            <div class="tabs" id="projectTabs"></div>
+            <div class="search">
+              <span aria-hidden="true">⌕</span>
+              <input id="projectSearch" type="search" placeholder="Rechercher un projet…" />
+            </div>
+          </div>
+
+          <div class="grid cards" id="projectsGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="competences" class="section section--alt">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Compétences (BTS SIO)</h2>
+            <p class="sub">Mapping “compétences ↔ preuves” : tu montres, tu justifies, tu prouves.</p>
+          </div>
+
+          <div class="split">
+            <div class="panel reveal">
+              <h3 class="h3">Le BTS SIO</h3>
+              <p class="p">
+                Le <strong>BTS SIO</strong> (Services Informatiques aux Organisations) est une formation de 2 ans qui forme des spécialistes
+                des systèmes d’information. Elle propose deux options :
+              </p>
+              <p class="p" style="margin-top:10px">
+                <strong>SLAM</strong> : conception, développement, tests et maintenance d’applications (PHP, JavaScript, Python, SQL).<br/>
+                <strong>SISR</strong> : administration systèmes/réseaux, sécurité, virtualisation (Linux, Windows Server, etc.).
+              </p>
+
+              <div class="meter">
+                <div class="meter__row">
+                  <span>Web (HTML/CSS/JS)</span><span id="mDev">0%</span>
+                </div>
+                <div class="meter__bar"><div id="bDev" class="meter__fill"></div></div>
+
+                <div class="meter__row">
+                  <span>Back / Data (PHP, Python, SQL)</span><span id="mNet">0%</span>
+                </div>
+                <div class="meter__bar"><div id="bNet" class="meter__fill"></div></div>
+
+                <div class="meter__row">
+                  <span>Git / GitHub</span><span id="mSec">0%</span>
+                </div>
+                <div class="meter__bar"><div id="bSec" class="meter__fill"></div></div>
+              </div>
+
+              <div class="callout">
+                <div class="callout__text">
+                  Ajoute tes preuves dans <code>assets/preuves</code> (PDF, captures) et fais des liens dans les projets.
+                </div>
+              </div>
+            </div>
+
+            <div class="panel reveal">
+              <h3 class="h3">Détails & preuves</h3>
+              <div class="accordion" id="skillsAccordion"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="veille" class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Veille technologique</h2>
+            <p class="sub">Ce que tu surveilles, pourquoi, et comment tu l’appliques dans tes projets.</p>
+          </div>
+
+          <div class="grid cards" id="veilleGrid"></div>
+        </div>
+      </section>
+
+      <section id="parcours" class="section section--alt">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Parcours</h2>
+            <p class="sub">Formation, stage, missions, réalisations marquantes.</p>
+          </div>
+
+          <ol class="timeline reveal" id="timeline"></ol>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Certifications</h2>
+            <p class="sub">Mes parcours de certification et preuves (PDF).</p>
+          </div>
+      
+          <div class="grid cards" id="certifsGrid"></div>
+        </div>
+      </section>      
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Contact</h2>
+            <p class="sub">Un message, une opportunité, une question sur un projet ?</p>
+          </div>
+
+          <div class="contact reveal">
+            <div class="contact__card">
+              <h3 class="h3">Me joindre</h3>
+              <p class="p">
+                ✉️ <a href="mailto:ludo-mastant@outlook.fr">ludo-mastant@outlook.fr</a><br />
+                🔗 <a href="https://github.com/ludo-mastant" target="_blank" rel="noreferrer">GitHub</a>
+                <span style="color: var(--muted2)">• LinkedIn : ajoute ton lien</span>
+              </p>
+
+              <div class="contact__chips">
+                <span class="tag">BTS SIO</span>
+                <span class="tag">SLAM</span>
+                <span class="tag">Web</span>
+                <span class="tag">Python</span>
+              </div>
+
+              <div class="contact__mini">
+                <div class="miniCard">
+                  <div class="miniCard__k">CV</div>
+                  <div class="miniCard__v">PDF</div>
+                </div>
+                <div class="miniCard">
+                  <div class="miniCard__k">Projets</div>
+                  <div class="miniCard__v">Concrets</div>
+                </div>
+                <div class="miniCard">
+                  <div class="miniCard__k">Docs</div>
+                  <div class="miniCard__v">Preuves</div>
+                </div>
+              </div>
+            </div>
+
+            <form class="contact__form" id="contactForm">
+              <label class="field">
+                <span>Nom</span>
+                <input required name="name" placeholder="Ton nom" />
+              </label>
+
+              <label class="field">
+                <span>Email</span>
+                <input required type="email" name="email" placeholder="tonmail@example.com" />
+              </label>
+
+              <label class="field">
+                <span>Objet</span>
+                <input required name="subject" placeholder="Demande de stage / alternance" />
+              </label>
+
+              <label class="field">
+                <span>Message</span>
+                <textarea required name="message" rows="5" placeholder="Explique ta demande…"></textarea>
+              </label>
+
+              <button class="btn btn--primary" type="submit">
+                Envoyer
+                <span aria-hidden="true">↗</span>
+              </button>
+
+              <p class="fine" id="formHint">
+                (Démo) Le formulaire ouvre ton client mail avec un message pré-rempli.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer__grid">
+          <div class="footer__left">
+            <div class="brand brand--small">
+              <span class="brand__dot"></span>
+              <span class="brand__name">Portfolio</span>
+              <span class="brand__tag">BTS SIO</span>
+            </div>
+            <div class="fine">© <span id="year"></span> • Conçu en HTML/CSS/JS</div>
+          </div>
+
+          <div class="footer__right">
+            <a href="#top">Haut ↑</a>
+            <a href="#projets">Projets</a>
+            <a href="#competences">Compétences</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Détails du projet">
+        <div class="modal__top">
+          <div>
+            <div class="modal__kicker" id="modalKicker"></div>
+            <div class="modal__title" id="modalTitle"></div>
+          </div>
+          <button class="iconbtn" id="btnCloseModal" type="button" aria-label="Fermer">✕</button>
+        </div>
+
+        <div class="modal__body">
+          <div class="modal__grid">
+            <div class="modal__main">
+              <div class="modal__desc" id="modalDesc"></div>
+
+              <div class="modal__proof">
+                <h4 class="h4">Preuves</h4>
+                <ul class="proof" id="modalProof"></ul>
+              </div>
+            </div>
+
+            <div class="modal__side">
+              <div class="sideCard">
+                <h4 class="h4">Techno</h4>
+                <div class="chips" id="modalTech"></div>
+              </div>
+              <div class="sideCard">
+                <h4 class="h4">Rôle & résultats</h4>
+                <ul class="bullets" id="modalMeta"></ul>
+              </div>
+              <div class="sideCard">
+                <h4 class="h4">Liens</h4>
+                <div class="links" id="modalLinks"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__bot">
+          <button class="btn btn--ghost" id="btnPrev" type="button">← Précédent</button>
+          <button class="btn btn--ghost" id="btnNext" type="button">Suivant →</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
