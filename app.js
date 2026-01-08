@@ -22,8 +22,8 @@
        meta: ["Rôle : dev", "Objectif : reproduire une UI + connecter une BDD", "Résultat : interface fonctionnelle"],
        proof: ["Captures UI (assets/preuves)", "Schéma BDD (PDF/PNG)", "README projet"],
        links: [
-         { label: "Repo GitHub (à mettre)", href: "https://github.com/ludo-mastant" },
-         { label: "Preuves (dossier)", href: "./assets/preuves/" },
+         { label: "Repo GitHub", href: "https://github.com/Elie-Shyti/Beeflix" },
+         { label: "Preuves (dossier)", href: "./assets/Beeflix" },
        ],
      },
      {
@@ -33,9 +33,9 @@
        kicker: "Projet logiciel",
        desc: "Développement d'un jeu Monopoly en Python avec gestion des joueurs et des règles.",
        tech: ["Python"],
-       meta: ["Rôle : dev", "Fonctions : joueurs, règles, tours", "Résultat : jeu jouable en console (à préciser)"],
-       proof: ["Diagramme logique (optionnel)", "Extraits de code commentés", "README + règles"],
-       links: [{ label: "Repo (à mettre)", href: "https://github.com/ludo-mastant" }],
+       meta: ["Rôle : dev", "Fonctions : joueurs, règles, tours", "Résultat : jeu jouable en console"],
+       proof: ["Extraits de code commentés", "README + règles"],
+       links: [{ label: "Repo", href: "https://github.com/ludo-mastant/Projet-Monopoly" }],
      },
      {
        id: "p3",
@@ -47,7 +47,7 @@
        tech: ["Unity", "C#"],
        meta: ["Rôle : dev", "Statut : en cours", "Prochaines étapes : gameplay + UI"],
        proof: ["Captures (assets/preuves)", "Roadmap (PDF)", "README"],
-       links: [{ label: "Repo (si public)", href: "#" }],
+       links: [{ label: "pas de Repo", href: "#" }],
      },
      {
        id: "p4",
@@ -59,7 +59,7 @@
        tech: ["Linux/Unix", "SSH", "Scripts", "Exploitation", "Docs"],
        meta: ["Missions : MEP", "Scripts Unix/Linux", "Réunions versions/incidents"],
        proof: ["Compte-rendu stage (PDF)", "Journal de bord", "Scripts (anonymisés)"],
-       links: [{ label: "Dossier preuves", href: "./assets/preuves/" }],
+       links: [{ label: "Dossier preuves", href: "./assets/" }],
      },
    ];
    
@@ -68,9 +68,9 @@
        group: "Web",
        percent: 85,
        items: [
-         { title: "HTML/CSS (responsive)", proof: "Clone Netflix : structure + mise en page + responsive (à détailler)" },
-         { title: "JavaScript (DOM)", proof: "Interactions UI, navigation, logique côté client" },
-         { title: "PHP (bases)", proof: "Connexion BDD, pages dynamiques (à préciser)" },
+         { title: "HTML/CSS (responsive)", proof: "Clone Netflix : structure + mise en page + responsive" },
+         { title: "JavaScript (DOM)", proof: "Interactions UI, navigation" },
+         { title: "PHP (bases)", proof: "Connexion BDD, pages dynamiques" },
        ],
      },
      {
@@ -78,15 +78,15 @@
        percent: 75,
        items: [
          { title: "Logique / algorithmes", proof: "Jeu Monopoly : règles, tours, joueurs" },
-         { title: "Structuration du code", proof: "Fonctions, modules, organisation" },
+         { title: "Structuration du code", proof: "Fonctions, classe, organisation" },
        ],
      },
      {
        group: "SQL / Données",
        percent: 70,
        items: [
-         { title: "Modélisation simple", proof: "Tables, relations, contraintes (à ajouter)" },
-         { title: "Requêtes", proof: "SELECT/INSERT/UPDATE (à ajouter)" },
+         { title: "Modélisation simple", proof: "Tables, relations, contraintes" },
+         { title: "Requêtes", proof: "SELECT/INSERT/UPDATE/DELETE" },
        ],
      },
      {
@@ -99,7 +99,7 @@
      },
    ];
    
-   /* ✅ VEILLE : 3 points clés 2025 */
+   /* VEILLE : 3 points clés 2025 */
    const VEILLE = [
      {
        title: "2025 — UE 5.6 : grosse priorité performance / open-world",
@@ -124,13 +124,13 @@
      },
    ];
    
-   /* ✅ CERTIFICATIONS : tu modifies juste ici */
+   /* CERTIFICATIONS : tu modifies juste ici */
    const CERTIFS = [
      {
-       title: "Nom de ta certification",
+       title: "SecNumacadémie",
        org: "SecNum de l'ANSSI",
        date: "2024",
-       proof: "./assets/preuves/ma-certification_SecNum.pdf",
+       proof: "./assets/ma-certification_SecNum.pdf",
      },
      // Ajoute-en d'autres si tu veux
    ];
