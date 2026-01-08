@@ -862,3 +862,39 @@ main, header, footer, section, aside, .modal, .cmdk { position: relative; z-inde
   .cards{ grid-template-columns: 1fr; }
   .stats{ grid-template-columns: 1fr; }
 }
+
+/* ===== FIX CmdK (menu recherche) ===== */
+.cmdk{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+
+  /* caché par défaut */
+  opacity: 0;
+  pointer-events: none;
+
+  /* fond + blur pour éviter “on voit le site derrière bizarre” */
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: opacity .15s ease;
+}
+
+.cmdk.is-open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cmdk__panel{
+  width: min(720px, calc(100% - 24px));
+  max-height: min(75vh, 600px);
+  overflow: hidden;
+}
+
+.cmdk__list{
+  max-height: 320px;
+  overflow: auto;
+}
