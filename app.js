@@ -13,17 +13,17 @@
    const PROJECTS = [
      {
        id: "p1",
-       title: "Clone Netflix (Front + BDD)",
+       title: "WoodyCraftWeb (Front + BDD)",
        category: "Web",
        kicker: "Projet web • UI",
        desc:
-         "Projet web où j'ai reproduit l'interface de Netflix avec HTML, CSS et JavaScript, puis relié à une base de données (phpMyAdmin) pour gérer du contenu.",
+         "Projet web où j'ai realiser un site de vente de puzzle 3D en ligne avec HTML, CSS PHP et JavaScript, puis relié à une base de données (HeidiSQL) pour gérer du contenu.",
        tech: ["HTML", "CSS", "JavaScript", "PHP", "phpMyAdmin", "SQL"],
        meta: ["Rôle : dev", "Objectif : reproduire une UI + connecter une BDD", "Résultat : interface fonctionnelle"],
        proof: ["Captures UI (assets/preuves)", "Schéma BDD (PDF/PNG)", "README projet"],
        links: [
-         { label: "Repo GitHub", href: "https://github.com/Elie-Shyti/Beeflix" },
-         { label: "Preuves (dossier)", href: "./assets/Beeflix" },
+         { label: "Repo GitHub", href: "https://github.com/ludo-mastant/Projet_WoodyCraftWeb" },
+         { label: "Preuves (dossier)", href: "./assets/" },
        ],
      },
      {
@@ -39,7 +39,7 @@
      },
      {
        id: "p3",
-       title: "Projet Unity 2D (maintenance)",
+       title: "Projet Unity 2D",
        category: "Jeu",
        kicker: "Work in progress",
        desc:
