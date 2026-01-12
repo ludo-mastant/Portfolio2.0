@@ -8,21 +8,21 @@ const $$ = (q, el = document) => Array.from(el.querySelectorAll(q));
 /* ---------------------------
    Data
 ---------------------------- */
-const STACK = ["HTML", "CSS", "JavaScript", "PHP", "Python", "SQL", "Git/GitHub"];
+const STACK = ["HTML", "CSS", "JavaScript", "PHP", "Python", "SQL", "Git/GitHub", "Ansible", "Linux"];
 
 const PROJECTS = [
   {
     id: "p1",
-    title: "Clone Netflix (Front + BDD)",
+    title: "WoodyCraftWeb site de e-commerce (Front + BDD)",
     category: "Web",
     kicker: "Projet web • UI",
     desc:
-      "Projet web où j'ai reproduit l'interface de Netflix avec HTML, CSS et JavaScript, puis relié à une base de données (phpMyAdmin) pour gérer du contenu.",
-    tech: ["HTML", "CSS", "JavaScript", "PHP", "phpMyAdmin", "SQL"],
+      "Projet web realiser avec PHP, CSS et JavaScript, puis relié à une base de données (HeidiSQL) pour gérer du contenu.",
+    tech: ["HTML", "CSS", "JavaScript", "PHP", "HeidiSQL", "SQL"],
     meta: ["Rôle : dev", "Objectif : reproduire une UI + connecter une BDD", "Résultat : interface fonctionnelle"],
     proof: ["Captures UI (assets/)", "Schéma BDD (PDF/PNG)", "README projet"],
     links: [
-      { label: "Repo GitHub (à mettre)", href: "https://github.com/ludo-mastant" },
+      { label: "Repo GitHub (à mettre)", href: "https://github.com/ludo-mastant/Projet_WoodyCraftWeb" },
       { label: "Assets (dossier)", href: "./assets/" },
     ],
   },
@@ -35,7 +35,7 @@ const PROJECTS = [
     tech: ["Python"],
     meta: ["Rôle : dev", "Fonctions : joueurs, règles, tours", "Résultat : jeu jouable en console (à préciser)"],
     proof: ["Diagramme logique (optionnel)", "Extraits de code commentés", "README + règles"],
-    links: [{ label: "Repo (à mettre)", href: "https://github.com/ludo-mastant" }],
+    links: [{ label: "Repo (à mettre)", href: "https://github.com/ludo-mastant/Projet-Monopoly" }],
   },
   {
     id: "p3",
@@ -47,7 +47,7 @@ const PROJECTS = [
     tech: ["Unity", "C#"],
     meta: ["Rôle : dev", "Statut : en cours", "Prochaines étapes : gameplay + UI"],
     proof: ["Captures (assets/)", "Roadmap (PDF)", "README"],
-    links: [{ label: "Repo (si public)", href: "#" }],
+    links: [{ label: "Repo", href: "#" }],
   },
   {
     id: "p4",
@@ -61,6 +61,23 @@ const PROJECTS = [
     proof: ["Compte-rendu stage (PDF)", "Journal de bord", "Scripts (anonymisés)"],
     links: [{ label: "Dossier assets", href: "./assets/" }],
   },
+  {
+    id: "p5",
+    title: "Projet d’alternance — IHM sur mesure pour Ansible",
+    category: "Alternance",
+    kicker: "DevOps • Automatisation",
+    desc:
+      "Objectif : concevoir une IHM (interface web) faite main pour piloter des playbooks Ansible, centraliser les actions récurrentes et simplifier l’usage pour les équipes.",
+    tech: ["Ansible", "Linux", "SSH", "YAML", "API", "HTML", "CSS", "JavaScript"],
+    meta: [
+      "Rôle : dev (alternance)",
+      "Objectif : IHM + orchestration Ansible",
+      "Résultat : interface claire pour lancer/suivre des automatisations (en cours)",
+    ],
+    proof: ["Maquettes UI", "Schéma d’architecture", "Extraits de code (anonymisés)", "Journal de bord / tickets"],
+    links: [{ label: "Contexte / preuves", href: "./assets/" }],
+  },
+
 ];
 
 const SKILLS = [
@@ -68,7 +85,7 @@ const SKILLS = [
     group: "Web",
     percent: 85,
     items: [
-      { title: "HTML/CSS (responsive)", proof: "Clone Netflix : structure + mise en page + responsive (à détailler)" },
+      { title: "HTML/CSS (responsive)", proof: "Clone Netflix : structure + mise en page + responsive et site e-commerce dynamique" },
       { title: "JavaScript (DOM)", proof: "Interactions UI, navigation, logique côté client" },
       { title: "PHP (bases)", proof: "Connexion BDD, pages dynamiques (à préciser)" },
     ],
@@ -85,8 +102,8 @@ const SKILLS = [
     group: "SQL / Données",
     percent: 70,
     items: [
-      { title: "Modélisation simple", proof: "Tables, relations, contraintes (à ajouter)" },
-      { title: "Requêtes", proof: "SELECT/INSERT/UPDATE (à ajouter)" },
+      { title: "Modélisation simple", proof: "Tables, relations, contraintes" },
+      { title: "Requêtes", proof: "SELECT/INSERT/UPDATE/DELETE" },
     ],
   },
   {
@@ -181,6 +198,7 @@ $$(".drawer__links a").forEach((a) => a.addEventListener("click", closeDrawer));
 const typingEl = $("#typing");
 const roles = [
   "développeur web (SLAM).",
+  "alternant DevOps / Ansible.",
   "profil orienté projets.",
   "passionné par le dev et les jeux.",
 ];
