@@ -898,3 +898,81 @@ main, header, footer, section, aside, .modal, .cmdk { position: relative; z-inde
   max-height: 320px;
   overflow: auto;
 }
+
+/* ===== Light mode : fond vraiment blanc (override) ===== */
+[data-theme="light"] body{
+  background: #ffffff !important;
+}
+
+/* On atténue fortement le noise en light */
+[data-theme="light"] .noise{
+  opacity: 0.06 !important;
+  mix-blend-mode: multiply;
+}
+
+/* Canvas plus discret en light */
+[data-theme="light"] #fx-canvas{
+  opacity: 0.25;
+}
+
+/* Optionnel : header/drawer/modal plus “blanc” */
+[data-theme="light"] .header{
+  background: rgba(255,255,255,0.85);
+}
+
+[data-theme="light"] .drawer__panel,
+[data-theme="light"] .modal__panel,
+[data-theme="light"] .cmdk__panel{
+  background: rgba(255,255,255,0.92);
+}
+
+
+/* ===== LIGHT MODE ===== */
+[data-theme="light"] body{
+  background-color: #ffffff !important;
+  background-image: none !important;
+  background: #ffffff !important;
+}
+
+/* En light */
+[data-theme="light"] .noise{ display: none !important; }
+[data-theme="light"] #fx-canvas{ display: none !important; }
+
+/* Sections : pas de teinte grise */
+[data-theme="light"] .section--alt{
+  background: #ffffff !important;
+  border-top: 1px solid rgba(10,14,22,0.08) !important;
+  border-bottom: 1px solid rgba(10,14,22,0.08) !important;
+}
+
+/* Cartes/panels : blanc réel */
+[data-theme="light"] .card,
+[data-theme="light"] .panel,
+[data-theme="light"] .stat,
+[data-theme="light"] .nav,
+[data-theme="light"] .chip,
+[data-theme="light"] .search,
+[data-theme="light"] .badge,
+[data-theme="light"] .drawer__panel,
+[data-theme="light"] .modal__panel,
+[data-theme="light"] .cmdk__panel,
+[data-theme="light"] .contact__card,
+[data-theme="light"] .contact__form{
+  background: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(10,14,22,0.08) !important;
+}
+
+/* Chips/petits éléments  */
+[data-theme="light"] .pchip,
+[data-theme="light"] .chiplet,
+[data-theme="light"] .tag,
+[data-theme="light"] .link,
+[data-theme="light"] .acc,
+[data-theme="light"] .miniCard{
+  background: rgba(10,14,22,0.03) !important;
+}
+
+/* Header */
+[data-theme="light"] .header{
+  background: rgba(255,255,255,0.92) !important;
+}
